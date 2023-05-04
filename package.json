@@ -20,8 +20,8 @@
   "author": "Vikas Gautam <v33vikasgautam@gmail.com> (http://mytrikks.blogspot.com)",
   "license": "MIT",
   "dependencies": {
-    "thenForEach": "git+https://github.com/Vikasg7/thenForEach.git",
-    "typescript": "^2.4.2"
+    "thenForEach": "git+https://github.com/ckapop/thenForEach.git",
+    "typescript": "~3.8.3"
   },
   "devDependencies": {
     "browserify": "^14.4.0",

@@ -13,6 +13,7 @@
         "experimentalDecorators": false,
         "noImplicitAny": true,
         "suppressImplicitAnyIndexErrors": true,
-        "outDir": "./dist/"
+        "outDir": "./dist/",
+        "ignoreDeprecations": "5.0"
     }
 }
