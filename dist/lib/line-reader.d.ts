@@ -7,9 +7,9 @@ export declare class LineReader {
     private _lineNum;
     private _continue;
     constructor(_file: File, _chunkSize?: number);
-    private _readFile(file);
-    private _arrBuf2String(buf);
-    private _buf2Lines(buf);
-    private _cleanUp();
+    private _readFile;
+    private _arrBuf2String;
+    private _buf2Lines;
+    private _cleanUp;
     forEachLine(fn: (line?: string, index?: number, context?: any) => void, context?: any): Promise<any>;
 }

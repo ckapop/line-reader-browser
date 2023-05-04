@@ -36,7 +36,7 @@ class LineReader {
         return Promise.resolve(); // this will help in chaining promises
     }
     forEachLine(fn, context) {
-        if (this._bytesRead >= this._file.size) {
+        if (this._bytesRead >= this._file.size) { // No more content in the file
             if (!this._lastLine)
                 return Promise.resolve(context);
             return Promise.resolve(this._lastLine)
@@ -44,7 +44,7 @@ class LineReader {
                 .then(() => this._cleanUp())
                 .then(() => context);
         }
-        else {
+        else { // File still have some content to read
             const b = this._file.slice(this._bytesRead, this._bytesRead + this._chunkSize);
             return this._readFile(b)
                 .then((buf) => this._buf2Lines(buf))

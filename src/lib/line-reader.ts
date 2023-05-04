@@ -15,7 +15,7 @@ export class LineReader {
    private _readFile(file: Blob): Promise<ArrayBuffer> {
       return new Promise<ArrayBuffer>((resolve, reject) => {
          const reader = new FileReader()
-         reader.onload = () => resolve(reader.result)
+         reader.onload = () => resolve(reader.result as ArrayBuffer)
          reader.onerror = (error: any) => reject(error)
          reader.readAsArrayBuffer(file)
       })
